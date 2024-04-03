@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', sans-serif;
+    font-size: 20px;
+}
+body{
+    background-color: #0B60B0;
+}
+h2 {
+  font-family: "Varela Round", sans-serif;
+}
+h1{
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -2px 1px 4px rgba(0,0,0,0.37);
+  margin: 10px;
+  padding: 1;
+}
+#logo{
+  height: 100px;
+  width: auto;
+}
+.redes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 151.05px;
+}
+.redes img{
+  height: 50px;
+  width: auto;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.cards .tarjeta {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.cards .tarjeta h6{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.cards .tarjeta p{
+  font-size:15px;
+  text-align:center;
+  
+}
+
+.cards .tarjeta img{
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  object-fit:contain;
+}
+
+.cards .tarjeta a{
+  text-decoration: none;
+  
+}
+
+.tarjeta.volteada {
+  transform: rotateY(180deg);
+}
+.tarjeta.volteada .informacion {
+  backface-visibility: visible;
+}
+.tarjeta.volteada img{
+  display: none;
+}
+.informacion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.pie {
+  display: flex;
+  flex-direction:row;
+  position: static;
+  background-color: #F2F4F4;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+.pie h6{
+  color: #007bc1;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.37);
+}
+.hora-dire{
+  flex: wrap;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin: 0;
+  padding: 10px;
+  width: auto;
+  width: 33%;
+  box-sizing: border-box;
+}
+.pie .hora-dire p{
+  font-size: 17px;
+}
+.pie .map{
+  flex: wrap;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin: 0;
+  padding: 10px;
+  width: 33%;
+  box-sizing: border-box;
+}
+.pie .map iframe{
+  height: 100px;
+  width: 200px;
+  
+}
+.pie .nodos{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  width: 33%;
+  box-sizing: border-box;
+}
+
+.nodos p{
+  font-size: 10px;
+}
+
+.pie img{
+  height: 30px;
+  width: auto;
+}
+@media only screen and (max-width: 768px) {
+  .pie {
+    flex-direction: column; /* Cambiar a una disposición de columna en dispositivos móviles */
+  }
+  .pie .hora-dire,
+  .pie .map,
+  .pie .nodos {
+    width: 100%; /* Cambiar el ancho de las columnas a 100% en dispositivos móviles */
+    margin: 0; /* Eliminar márgenes en dispositivos móviles */
+  }
+  .pie .map iframe {
+    height: 200px; /* Modificar el tamaño del iframe en dispositivos móviles */
+    width: 100%; /* Ajustar el ancho del iframe al 100% en dispositivos móviles */
+  }
+  .pie img {
+    height: auto; /* Permitir que la altura de la imagen se ajuste automáticamente en dispositivos móviles */
+    width: 100%; /* Ajustar el ancho de la imagen al 100% en dispositivos móviles */
+  }
+}
